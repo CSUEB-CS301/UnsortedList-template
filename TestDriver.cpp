@@ -32,14 +32,10 @@ int main()
 	cin >> outFileName;
 	outFile.open(outFileName);
 
-	cout << "Enter name of test run: ";
-	cin >> outputLabel;
-
-	outFile << outputLabel << endl;
 	if (!inFile)
 	{
 		cout << "File not found." << endl;
-		exit(2);
+		exit(2);  // You can actually put any value here.  Used to signal some error to the operating system.
 	}
 
 	inFile >> command;
@@ -79,7 +75,7 @@ int main()
 			}
 		}
 		else if (command == "GetLength") {
-                        cout << "Length is " << list.GetLength() << endl;
+            cout << "Length is " << list.GetLength() << endl;
 			outFile << "Length is " << list.GetLength() << endl;
 		}
 		else if (command == "IsFull") {
@@ -92,8 +88,8 @@ int main()
             }
 		}
 		else if (command == "MakeEmpty") {
-            cout << "Make list empty." << endl;
-            outFile << "Make list empty." << endl;
+		    cout << "Make list empty." << endl;
+		    outFile << "Make list empty." << endl;
 			list.MakeEmpty();
 		}
 		else if (command == "PrintList") {
