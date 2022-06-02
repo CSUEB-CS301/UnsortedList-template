@@ -30,7 +30,7 @@ public:
   //       item's key, then the function returns true.
   // 	     otherwise it will return false. List is unchanged.
 
-  void PutItem(int item);
+  void AddItem(int item);
   // Function: Adds item to list.
   // Pre:  List has been initialized.
   //       List is not full.
