@@ -45,11 +45,11 @@ int main()
 	while (command != "Quit")
 	{
 		//cout << "Command: " << command;
-		if (command == "PutItem")
+		if (command == "AddItem")
 		{
 			inFile >> item;
 			//cin >> item;
-			list.PutItem(item);
+			list.AddItem(item);
 			outFile << item;
 			outFile << " is in list." << endl;
 		}
